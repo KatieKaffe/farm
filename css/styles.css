@@ -4,12 +4,17 @@
 
 
 /*-------------------- CSS REST ---------------------------------------------------*/
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+
+/* @import url('https://meyerweb.com/eric/tools/css/reset/reset.css'); */
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
@@ -20,6 +25,196 @@ body {
     font-family: 'Habibi', serif;
     font-size: 1.25em;
     line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Habibi', serif;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Irish Grover', serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 3px #000000;
+    margin: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #000000;
+    font-family: 'Irish Grover', serif;
+    font-size: 1.75em;
+}
+
+h3 {
+    color: #000000;
+    font-family: 'Irish Grover', serif;
+    font-size: 1.25em;
+}
+
+header {
+    display: grid;
+    background-color: #06A816;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header p {
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    margin: 10px;
+}
+
+nav {
+    margin: -15px 0 25px;
+    padding: 0;
+    height: 150px;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    text-align: center;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+
+.topNav, .bottomNav{
+    display: block;
+    color: #ffffff;
+}
+
+.topNav {
+    display: inline-block;
+    background-color: #E75D02;
+    padding: 5px;
+    margin: 10px;
+    width: 68%;
+    border-radius: 5px;
+
+}
+
+.bottomNav{
+    position: fixed;
+    bottom: 25px;
+    right: 2.5px;
+    background-color: #E75D02;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    outline: 2.5px solid #ffffff;
+}
+
+#fruitSection h2 {
+    margin-top: 58px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+}
+
+#vegetableSection h2 {
+    margin-top: 78px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+}
+
+#fruitSection p {
+    margin-left: 12px;
+}
+#vegetableSection p {
+    margin-left: 12px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 0;
+}
+
+#fruits-for-sale, #vegetables-for-sale {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+figure {
+    display: inline-block;
+    position: relative;
+
+}
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0 0 0 /0.7);
+    color: #ffffff;
+    padding: 12px 40px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+footer {
+    background-color: #06A816;
+    color: #ffffff;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+#contact {
+text-align: center;
+margin-top: 24px;
+padding-top: 22px;
+}
+
+#hours {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 14px;
+    }
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer dl div {
+    display: block;
+    margin-bottom: 2px;
+}
+
+dt, dd {
+    display: inline-block;
+}
+
+dd {
+    margin: 0 0 0 8px;
+}
+
+footer p {
+    background-color: #ffffff;
+    color: #06A816;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
 }
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
