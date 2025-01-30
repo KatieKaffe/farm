@@ -1,35 +1,86 @@
-/* -------------------- IMPORTED FONTS -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
 
-/*-------------------- CSS REST ---------------------------------------------------*/
+/*-------------------- CSS RESET --------------------*/
 
-*, *:before, *:after {
-    box-sizing: inherit;
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain) 
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-/* -------------------- ROOT VARIABLES --------------------------------------- */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
 
-html{
-    box-sizing: border-box;
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES  -------------------- */
+
+:root {
+    font-family: "Habibi", serif;
+    font-size: 1.25em;
+    --green:#06A816;
+    --orange:#E75D02;
+    --black:#000000;
+    --white:#ffffff;
 }
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
 body {
+    min-width: 428px;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    font-family: 'Habibi', serif;
-    font-size: 1.25em;
     line-height: 1.5em;
 }
 
 a {
     text-decoration: none;
     color: #ffffff;
-    font-family: 'Habibi', serif;
 }
 
 h1 {
@@ -46,6 +97,7 @@ h2 {
     font-family: 'Irish Grover', serif;
     font-size: 1.75em;
 }
+
 
 h3 {
     color: #000000;
@@ -70,13 +122,14 @@ header p {
 }
 
 nav {
-    margin: -15px 0 25px;
+    margin: 0 0 25px;
     padding: 0;
     height: 150px;
     text-align: center;
 }
 
 nav ul {
+    margin: 40px 0;
     padding: 0;
     text-align: center;
 }
@@ -98,7 +151,6 @@ nav h2 {
     margin: 10px;
     width: 68%;
     border-radius: 5px;
-
 }
 
 .bottomNav {
@@ -112,13 +164,13 @@ nav h2 {
 }
 
 #fruitSection h2 {
-    margin-top: 58px;
+    margin-top: 72px;
     margin-bottom: 16px;
     margin-left: 8px;
 }
 
 #vegetableSection h2 {
-    margin-top: 78px;
+    margin-top: 66px;
     margin-bottom: 16px;
     margin-left: 8px;
 }
@@ -132,6 +184,7 @@ nav h2 {
 
 h3 {
     text-align: center;
+    margin-top: 28px;
     margin-bottom: 0;
 }
 
@@ -149,7 +202,7 @@ figure {
     display: inline-block;
     position: relative;
     z-index: -1;
-    margin: 25px;
+    margin: 12px 25px 32px;
 }
 
 figcaption {
@@ -172,6 +225,7 @@ img {
 footer {
     background-color: #06A816;
     color: #ffffff;
+    margin-top: 14px;
 }
 
 footer h2 {
@@ -180,15 +234,23 @@ footer h2 {
 
 #contact {
 text-align: center;
-margin-top: 24px;
-padding-top: 22px;
+padding-top: 30px;
+}
+
+#contact h2 {
+    padding-top: 22px;
 }
 
 #hours {
     text-align: center;
     margin-top: 20px;
-    padding-top: 14px;
+    padding: 14px 0;
+
     }
+
+#hours h2 {
+    padding-top: 36px;
+}
 
 footer h2 {
     margin-bottom: 15px;
@@ -217,6 +279,7 @@ footer p {
     font-weight: bold;
     text-align: center;
     font-size: 24px;
+    padding-bottom: 15px;
 }
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
@@ -227,6 +290,10 @@ footer p {
         display: flex;
         justify-content: space-between;
         padding: 5px 5px 10px;
+    }
+
+    nav{
+        margin-bottom: 16px;
     }
 
     ul {
@@ -240,18 +307,36 @@ footer p {
         justify-content: center;
     }
 
-    figure {
-        margin: 25px 50px;
+    #fruitSection h2 {
+        margin-top: 15px;
     }
 
-    footer {
-        margin-top: 30px;
+    h3 {
+        margin-top: 22px;
+    }
+
+    figure {
+        margin: 12px 50px 35px;
+    }
+
+    #vegetableSection h2 {
+        margin-top: 60px;
     }
 
     #contact-hours {
         display: flex;
         justify-content: space-around;
         margin-left: 50px;
+    }
+
+    #contact h2 {
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+
+    #hours h2 {
+        padding-top: 14px;
+        padding-bottom: 8px;
     }
 
 }
@@ -272,15 +357,24 @@ footer p {
     nav {
         position: absolute;
         right: 10px;
-        top: 0;
+        top: 2px;
     }
 
     .topNav {
         outline: 2.5px solid #ffffff;
         width: 300px;
     }
+
+    #fruitSection h2 {
+        margin-top: 60px;
+    }
+
     .fruit-for-sale, .vegetables-for-sale {
         justify-content: space-between;
+    }
+
+    h3 {
+        margin-top: 30px;
     }
 
     #contact-hours {
@@ -291,10 +385,19 @@ footer p {
     #contact, #hours {
         display: flex;
         margin: 0;
+        padding: 20px;
+    }
+
+    #contact h2, #hours h2 {
+        padding-top: 30px;
     }
 
     #contact address, #hours dl {
         margin-left: 150px;
+    }
+
+    #contact address {
+        padding-top: 0;
     }
 
     footer dl {
@@ -307,11 +410,21 @@ footer p {
 
 @media screen and (min-width: 1440px) {
 
+    #fruitSection h2 {
+        margin-top: 56px;
+    }
+
+    h3 {
+        margin-top: 26px;
+
+    }
+
     figure {
-        margin: 25px 25px;
+        margin: 12px 25px 34px;
     }
     
     footer {
-        margin-top: 20px;
+        margin-top: 10px;
     }
+    
 }
