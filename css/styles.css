@@ -5,15 +5,14 @@
 
 /*-------------------- CSS REST ---------------------------------------------------*/
 
-/* @import url('https://meyerweb.com/eric/tools/css/reset/reset.css'); */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 
 html{
     box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
 }
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
@@ -224,34 +223,34 @@ footer p {
 
 @media screen and (min-width: 834px){
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 5px 10px;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 5px 10px;
+    }
 
-ul {
-    display: flex;
-    justify-content: space-around;
-}
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
 
-.topNav {
-    display: inline-flex;
-    width: 35%;
-    justify-content: center;
-}
+    .topNav {
+        display: inline-flex;
+        width: 35%;
+        justify-content: center;
+    }
 
-ç
+    ç
 
-footer {
-    margin-top: 30px;
-}
+    footer {
+        margin-top: 30px;
+    }
 
-#contact-hours {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 50px;
-}
+    #contact-hours {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 50px;
+    }
 
 }
 
@@ -259,46 +258,46 @@ footer {
 
 @media screen and (min-width: 1280px) {
 
-header {
-    display: grid;
-    padding: 10px;
-}
+    header {
+        display: grid;
+        padding: 10px;
+    }
 
-h1 {
-    text-align: left;
-}
+    h1 {
+        text-align: left;
+    }
 
-nav {
-    position: absolute;
-    right: 10px;
-    top: 0;
-}
+    nav {
+        position: absolute;
+        right: 10px;
+        top: 0;
+    }
 
-.topNav {
-    outline: 2.5px solid #ffffff;
-    width: 300px;
-}
-.fruit-for-sale, .vegetables-for-sale {
-    justify-content: space-between;
-}
+    .topNav {
+        outline: 2.5px solid #ffffff;
+        width: 300px;
+    }
+    .fruit-for-sale, .vegetables-for-sale {
+        justify-content: space-between;
+    }
 
-#contact-hours {
-    display: flex;
-    margin:0;
-}
+    #contact-hours {
+        display: flex;
+        margin:0;
+    }
 
-#contact, #hours {
-    display: flex;
-    margin: 0;
-}
+    #contact, #hours {
+        display: flex;
+        margin: 0;
+    }
 
-#contact address, #hours dl {
-    margin-left: 150px;
-}
+    #contact address, #hours dl {
+        margin-left: 150px;
+    }
 
-footer dl {
-    margin-top: 0;
-}  
+    footer dl {
+        margin-top: 0;
+    }  
 
 }
 
