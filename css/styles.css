@@ -87,7 +87,7 @@ nav h2 {
     height: 1px;
 }
 
-.topNav, .bottomNav{
+.topNav, .bottomNav {
     display: block;
     color: #ffffff;
 }
@@ -102,7 +102,7 @@ nav h2 {
 
 }
 
-.bottomNav{
+.bottomNav {
     position: fixed;
     bottom: 25px;
     right: 2.5px;
@@ -149,7 +149,8 @@ p{
 figure {
     display: inline-block;
     position: relative;
-
+    z-index: -1;
+    margin: 25px;
 }
 
 figcaption {
@@ -223,11 +224,81 @@ footer p {
 
 @media screen and (min-width: 834px){
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.topNav {
+    display: inline-flex;
+    width: 35%;
+    justify-content: center;
+}
+
+ç
+
+footer {
+    margin-top: 30px;
+}
+
+#contact-hours {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+}
+
 }
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 
 @media screen and (min-width: 1280px) {
+
+header {
+    display: grid;
+    padding: 10px;
+}
+
+h1 {
+    text-align: left;
+}
+
+nav {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.topNav {
+    outline: 2.5px solid #ffffff;
+    width: 300px;
+}
+.fruit-for-sale, .vegetables-for-sale {
+    justify-content: space-between;
+}
+
+#contact-hours {
+    display: flex;
+    margin:0;
+}
+
+#contact, #hours {
+    display: flex;
+    margin: 0;
+}
+
+#contact address, #hours dl {
+    margin-left: 150px;
+}
+
+footer dl {
+    margin-top: 0;
+}  
 
 }
 
@@ -235,4 +306,11 @@ footer p {
 
 @media screen and (min-width: 1440px) {
 
+    figure {
+        margin: 25px 25px;
+    }
+    
+    footer {
+        margin: 20px;
+    }
 }
